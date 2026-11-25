@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f1e8">
+  <meta name="description" content="Herramienta académica para comprender el diseño, fabricación y costos de un organizador de cartón.">
+  <title>Organizador de Cartón | Diseño y fabricación</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Organizador de Cartón, volver al inicio">
+      <span class="brand-mark" aria-hidden="true">OC</span>
+      <span><strong>Organizador de Cartón</strong><small>Diseño · fabricación · aprovechamiento</small></span>
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <button class="nav-link" type="button" data-section="modelo">Modelo geométrico</button>
+      <button class="nav-link" type="button" data-section="costos">Costos</button>
+      <button class="nav-link" type="button" data-section="propuesta">Propuesta</button>
+      <button class="nav-link nav-print" type="button" id="print-button">Imprimir informe</button>
+    </nav>
+  </header>
+
+  <div id="print-report-title" class="print-only" aria-hidden="true">
+    <p>INFORME ACADÉMICO · DISEÑO Y FABRICACIÓN</p><h1>Organizador de Cartón</h1><span>Modelo geométrico · costos · aprovechamiento</span>
+  </div>
+
+  <main>
+    <section class="page-section home-section active" id="inicio" aria-labelledby="home-title">
+      <div class="hero-copy">
+        <p class="eyebrow">PROYECTO ACADÉMICO · FABRICACIÓN EN CARTÓN</p>
+        <h1 id="home-title">Diseñar mejor.<br><span>Aprovechar cada pieza.</span></h1>
+        <p class="hero-description">Explora el modelo geométrico, el plan de corte y los costos de un organizador de escritorio abierto, fabricado con cartón y dividido en tres compartimentos.</p>
+        <div class="hero-actions">
+          <button class="button button-primary" type="button" data-section="modelo">Explorar el modelo <span aria-hidden="true">→</span></button>
+          <button class="button button-secondary" type="button" data-section="costos">Consultar costos</button>
+        </div>
+        <div class="hero-facts" aria-label="Características principales">
+          <span><strong>24 × 12 × 10</strong><small>cm · medidas exteriores</small></span>
+          <span><strong>3</strong><small>compartimentos</small></span>
+          <span><strong>7</strong><small>piezas por unidad</small></span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-caption"><span class="caption-dot"></span> MODELO · VISTA EN PERSPECTIVA</div>
+        <svg class="hero-organizer" viewBox="0 0 640 430" role="img" aria-labelledby="hero-svg-title hero-svg-desc">
+          <title id="hero-svg-title">Organizador abierto con tres compartimentos</title>
+          <desc id="hero-svg-desc">Vista en perspectiva de un organizador rectangular de cartón. Un compartimento ocupa todo el frente y dos compartimentos iguales están detrás.</desc>
+          <defs>
+            <linearGradient id="box-front" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#c88e54"/><stop offset="1" stop-color="#a96c38"/>
+            </linearGradient>
+            <linearGradient id="box-side" x1="0" x2="1">
+              <stop stop-color="#9c6133"/><stop offset="1" stop-color="#80502d"/>
+            </linearGradient>
+            <linearGradient id="box-base" x1="0" x2="0.9" y1="0" y2="1">
+              <stop stop-color="#f0d7b5"/><stop offset="1" stop-color="#dfbd91"/>
+            </linearGradient>
+            <filter id="box-shadow" x="-20%" y="-20%" width="150%" height="160%">
+              <feDropShadow dx="0" dy="13" stdDeviation="11" flood-color="#573b25" flood-opacity=".17"/>
+            </filter>
+          </defs>
+          <g filter="url(#box-shadow)" stroke="#704726" stroke-linejoin="round" stroke-width="3">
+            <path d="M92 150 387 76 555 143 257 224Z" fill="#b77c47"/>
+            <path d="m92 150 165 74v165L92 307Z" fill="url(#box-front)"/>
+            <path d="m257 224 298-81v166l-298 95Z" fill="url(#box-side)"/>
+            <path d="m123 164 263-65 128 52-265 72Z" fill="url(#box-base)" stroke-width="2"/>
+            <path d="m123 164 4 25 123 55v-25Z" fill="#d4ab7c" stroke-width="2"/>
+            <path d="m254 132 128 55v12l-128-55Z" fill="#d0a16d" stroke-width="2"/>
+            <path d="m254 144 128 55v83l-128-55Z" fill="#b77c47" stroke-width="2"/>
+            <path d="m318 160 132-35v12l-132 35Z" fill="#d0a16d" stroke-width="2"/>
+            <path d="m318 172 132-35v78l-132 35Z" fill="#a96c38" stroke-width="2"/>
+          </g>
+          <g fill="#4f3826" font-family="Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">
+            <text x="302" y="148">TRASERO</text><text x="434" y="160">TRASERO</text>
+            <text x="193" y="195">COMPARTIMENTO</text><text x="193" y="215">DELANTERO</text>
+          </g>
+          <g fill="none" stroke="#75634e" stroke-width="1.5">
+            <path d="m91 344-30 14m30-14v11m166 64 37-9m-37 9v-12"/>
+            <path d="m63 358 195 52"/>
+          </g>
+          <text x="155" y="385" fill="#75634e" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">24 cm</text>
+          <g class="dimension-tag">
+            <rect x="441" y="282" width="145" height="53" rx="12"/>
+            <text x="454" y="302">3 COMPARTIMENTOS</text>
+            <text x="454" y="321">Abierto · cartón 3 mm</text>
+          </g>
+        </svg>
+        <p class="visual-note">Un espacio delantero de ancho completo y dos espacios traseros iguales.</p>
+      </div>
+      <div class="home-shortcuts">
+        <button class="shortcut-card" type="button" data-section="modelo">
+          <span class="shortcut-number">01</span><span><strong>Modelo geométrico</strong><small>Medidas, piezas, área y plano de corte</small></span><span class="shortcut-arrow" aria-hidden="true">↗</span>
+        </button>
+        <button class="shortcut-card" type="button" data-section="costos">
+          <span class="shortcut-number">02</span><span><strong>Costos</strong><small>Estimaciones académicas y simuladores</small></span><span class="shortcut-arrow" aria-hidden="true">↗</span>
+        </button>
+        <button class="shortcut-card" type="button" data-section="propuesta">
+          <span class="shortcut-number">03</span><span><strong>Propuesta</strong><small>Clasificación y registro de sobrantes</small></span><span class="shortcut-arrow" aria-hidden="true">↗</span>
+        </button>
+      </div>
+    </section>
+
+    <section class="page-section content-section" id="modelo" aria-labelledby="model-title" hidden>
+      <div class="section-heading">
+        <p class="eyebrow">01 · DISEÑO Y MATERIAL</p>
+        <h1 id="model-title">Modelo geométrico</h1>
+        <p>Dimensiones, componentes y aprovechamiento de una lámina para fabricar cuatro organizadores.</p>
+      </div>
+
+      <section class="report-block" aria-labelledby="product-model-title">
+        <div class="block-heading"><div><p class="eyebrow">PRODUCTO</p><h2 id="product-model-title">Un organizador, tres espacios</h2></div><span class="tag">Uniones a tope · sin superposición</span></div>
+        <div class="model-grid">
+          <div class="diagram-card">
+            <h3>Vista superior · distribución interior</h3>
+            <svg class="top-view-svg" viewBox="0 0 520 340" role="img" aria-labelledby="top-view-title top-view-desc">
+              <title id="top-view-title">Vista superior de los tres compartimentos</title>
+              <desc id="top-view-desc">Rectángulo interior de 23,4 por 11,4 centímetros. El compartimento delantero ocupa todo el ancho y dos compartimentos traseros iguales se dividen longitudinalmente.</desc>
+              <defs><pattern id="top-cardboard" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M0 8 8 0" stroke="#bd8c5c" stroke-opacity=".14"/></pattern></defs>
+              <rect x="76" y="61" width="366" height="178" rx="3" fill="#e9d2b2" stroke="#85592f" stroke-width="7"/>
+              <rect x="84" y="69" width="350" height="162" fill="url(#top-cardboard)"/>
+              <rect x="84" y="69" width="350" height="78" fill="#f3e5d1" stroke="#a87544" stroke-width="2"/>
+              <rect x="84" y="151" width="350" height="80" fill="#e3c39c" stroke="#a87544" stroke-width="2"/>
+              <line x1="259" y1="69" x2="259" y2="147" stroke="#895d35" stroke-width="8"/>
+              <line x1="84" y1="147" x2="434" y2="147" stroke="#895d35" stroke-width="8"/>
+              <g fill="#503b28" font-family="Arial, sans-serif" text-anchor="middle">
+                <text x="170" y="105" font-size="15" font-weight="700">TRASERO IZQUIERDO</text>
+                <text x="170" y="128" font-size="13">11,55 × 5,55 cm</text>
+                <text x="347" y="105" font-size="15" font-weight="700">TRASERO DERECHO</text>
+                <text x="347" y="128" font-size="13">11,55 × 5,55 cm</text>
+                <text x="259" y="186" font-size="16" font-weight="700">DELANTERO · 11,55 × 11,4 cm</text>
+              </g>
+              <g stroke="#6b5b48" stroke-width="1.5" fill="none">
+                <path d="M84 42v-15h350v15M64 69H43v162h21"/>
+                <path d="M84 260v19h350v-19M451 69h20v78h-20"/>
+              </g>
+              <g fill="#665541" font-family="Arial, sans-serif" font-size="13">
+                <text x="259" y="20" text-anchor="middle">23,4 cm · largo interior</text>
+                <text x="31" y="154" text-anchor="middle" transform="rotate(-90 31 154)">11,4 cm · ancho interior</text>
+                <text x="259" y="303" text-anchor="middle">División transversal · separación central</text>
+                <text x="478" y="112" text-anchor="middle" transform="rotate(90 478 112)">División longitudinal</text>
+              </g>
+            </svg>
+            <div class="diagram-legend"><span><i class="legend-swatch swatch-front"></i>Compartimento delantero</span><span><i class="legend-swatch swatch-back"></i>Compartimentos traseros</span><span><i class="legend-swatch swatch-divider"></i>Divisiones</span></div>
+          </div>
+          <div class="dimension-panel">
+            <h3>Dimensiones del producto</h3>
+            <div class="dimension-group"><span class="dimension-label">EXTERIORES</span>
+              <p><span>Largo</span><strong>24 cm</strong></p><p><span>Ancho</span><strong>12 cm</strong></p><p><span>Altura total</span><strong>10 cm</strong></p>
+            </div>
+            <div class="dimension-group"><span class="dimension-label">INTERIORES</span>
+              <p><span>Largo interior</span><strong>23,4 cm</strong></p><p><span>Ancho interior</span><strong>11,4 cm</strong></p><p><span>Altura útil</span><strong>9,7 cm</strong></p>
+            </div>
+            <div class="note-box"><strong>Material</strong><span>Cartón de 0,3 cm (3 mm). Las paredes tienen 9,7 cm de altura; la parte superior queda abierta.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="report-block" aria-labelledby="pieces-title">
+        <div class="block-heading"><div><p class="eyebrow">COMPONENTES</p><h2 id="pieces-title">Las siete piezas</h2></div><span class="tag">Por organizador</span></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Pieza</th><th>Cantidad</th><th>Dimensiones</th><th>Función</th></tr></thead>
+            <tbody>
+              <tr><td>Base</td><td>1</td><td>24 × 12 cm</td><td>Fondo del organizador</td></tr>
+              <tr><td>Paredes largas</td><td>2</td><td>24 × 9,7 cm</td><td>Frente y parte posterior</td></tr>
+              <tr><td>Paredes cortas</td><td>2</td><td>11,4 × 9,7 cm</td><td>Cierres laterales</td></tr>
+              <tr><td>División transversal</td><td>1</td><td>11,4 × 9,7 cm</td><td>Separa el espacio delantero de los traseros</td></tr>
+              <tr><td>División longitudinal</td><td>1</td><td>11,55 × 9,7 cm</td><td>Divide en dos los espacios traseros</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">Las paredes largas se ubican sobre los bordes largos de la base; las cortas se ajustan entre ellas. La división transversal cubre el ancho interior y la longitudinal se une a su cara posterior y a la pared trasera. Las divisiones se encuentran a tope, sin superponerse.</p>
+      </section>
+
+      <section class="report-block" aria-labelledby="formulas-title">
+        <div class="block-heading"><div><p class="eyebrow">CÁLCULO GEOMÉTRICO</p><h2 id="formulas-title">De medidas exteriores a interiores</h2></div></div>
+        <p class="section-intro">El espesor de las paredes reduce el espacio interior. En las medidas entre dos paredes se descuenta el espesor de ambos lados; en la altura, el fondo resta un espesor.</p>
+        <div class="formula-grid">
+          <article class="formula-card"><span>01 · LARGO INTERIOR</span><p>24 − (2 × 0,3)</p><strong>= 23,4 cm</strong><small>Se descuenta una pared de 0,3 cm en cada extremo.</small></article>
+          <article class="formula-card"><span>02 · ANCHO INTERIOR</span><p>12 − (2 × 0,3)</p><strong>= 11,4 cm</strong><small>Se descuenta el espesor de las dos paredes laterales.</small></article>
+          <article class="formula-card"><span>03 · ALTURA DE PAREDES</span><p>10 − 0,3</p><strong>= 9,7 cm</strong><small>La base ocupa 0,3 cm de la altura exterior total.</small></article>
+          <article class="formula-card"><span>04 · LARGO DE CADA ESPACIO</span><p>(23,4 − 0,3) / 2</p><strong>= 11,55 cm</strong><small>Se descuenta la división transversal y se reparte en dos.</small></article>
+          <article class="formula-card"><span>05 · ANCHO TRASERO</span><p>(11,4 − 0,3) / 2</p><strong>= 5,55 cm</strong><small>Se descuenta la división longitudinal y se reparte en dos.</small></article>
+        </div>
+      </section>
+
+      <section class="report-block" aria-labelledby="area-title">
+        <div class="block-heading"><div><p class="eyebrow">MATERIAL POR UNIDAD</p><h2 id="area-title">Área total de cartón</h2></div><span class="result-pill">1.197,375 cm² / organizador</span></div>
+        <p class="section-intro">Área total = área de la base + área de las paredes + área de las divisiones.</p>
+        <div class="calculation-panel">
+          <p><span>Base</span><code>24 × 12</code><strong>288 cm²</strong></p>
+          <p><span>2 paredes largas</span><code>2 × (24 × 9,7)</code><strong>465,6 cm²</strong></p>
+          <p><span>2 paredes cortas + división transversal</span><code>3 × (11,4 × 9,7)</code><strong>331,74 cm²</strong></p>
+          <p><span>División longitudinal</span><code>11,55 × 9,7</code><strong>112,035 cm²</strong></p>
+          <p class="calculation-total"><span>A<sub>T</sub></span><code>288 + 465,6 + 331,74 + 112,035</code><strong>1.197,375 cm²</strong></p>
+        </div>
+        <p class="callout-note">El organizador es abierto por arriba: no se incluye área de tapa. El cálculo corresponde al área geométrica de las siete piezas, sin considerar pérdidas reales de corte.</p>
+      </section>
+
+      <section class="report-block" aria-labelledby="cutplan-title">
+        <div class="block-heading"><div><p class="eyebrow">LÁMINA · 70 × 100 cm</p><h2 id="cutplan-title">Plan de corte para cuatro unidades</h2></div><span class="tag">28 piezas · área útil 68 × 98 cm</span></div>
+        <p class="section-intro">Márgenes exteriores de 1 cm por lado y separación de 0,2 cm entre cortes. Las piezas se giran según la orientación indicada en cada columna.</p>
+        <div class="cutplan-card">
+          <div class="cutplan-scroll"><svg id="cut-plan-svg" class="cut-plan-svg" role="img" aria-labelledby="cut-svg-title cut-svg-desc"></svg></div>
+          <div class="cutplan-legend">
+            <span><i class="legend-swatch cut-piece"></i>Piezas</span><span><i class="legend-swatch cut-gap"></i>Espacios de corte (0,2 cm)</span>
+            <span><i class="legend-swatch cut-margin"></i>Márgenes (1 cm)</span><span><i class="legend-swatch cut-offcut"></i>Sobrantes teóricos</span>
+          </div>
+        </div>
+        <div class="column-details">
+          <article><span>01 · BASES</span><p>4 bases de 24 × 12 cm giradas. Ancho de columna: 12 cm.</p><strong>4 × 24 + 3 × 0,2 = 96,6 cm</strong></article>
+          <article><span>02–03 · PAREDES LARGAS</span><p>4 piezas por columna de 24 × 9,7 cm, giradas. Ancho: 9,7 cm cada una.</p><strong>4 × 24 + 3 × 0,2 = 96,6 cm</strong></article>
+          <article><span>04–05 · PAREDES Y DIVISIONES</span><p>6 piezas de 11,4 × 9,7 cm y 2 de 11,55 × 9,7 cm por columna, giradas.</p><strong>6 × 11,4 + 2 × 11,55 + 7 × 0,2 = 92,9 cm</strong></article>
+        </div>
+        <p class="table-note">Las cinco columnas y sus separaciones ocupan 51,6 cm de ancho; la altura máxima es 96,6 cm. Ambas medidas caben en el área útil de 68 × 98 cm. En cada una de las columnas 4 y 5 se distribuyen cuatro paredes cortas, dos divisiones transversales y dos divisiones longitudinales.</p>
+      </section>
+
+      <section class="report-block" aria-labelledby="waste-area-title">
+        <div class="block-heading"><div><p class="eyebrow">BALANCE DE LA LÁMINA</p><h2 id="waste-area-title">Áreas y sobrantes teóricos</h2></div><span class="tag">Área de lámina: 7.000 cm²</span></div>
+        <div class="area-balance-grid">
+          <article class="balance-card balance-pieces"><span>ÁREA DE LAS 28 PIEZAS</span><strong>4.789,5 cm²</strong><small>4 × 1.197,375 cm²</small></article>
+          <article class="balance-card balance-cuts"><span>ESPACIOS DE CORTE</span><strong>124,4 cm²</strong><small>46,0 entre piezas + 78,4 en cuatro separaciones entre columnas</small></article>
+          <article class="balance-card balance-waste"><span>SOBRANTES TEÓRICOS</span><strong>1.750,1 cm²</strong><small>Clasificación R-001 a R-006</small></article>
+          <article class="balance-card balance-margins"><span>MÁRGENES EXTERIORES</span><strong>336 cm²</strong><small>7.000 − 6.664 cm² útiles</small></article>
+        </div>
+        <div class="equation-strip"><span>4.789,5 + 124,4 + 1.750,1 = <strong>6.664 cm²</strong> de área útil</span><span>6.664 + 336 = <strong>7.000 cm²</strong> de lámina</span></div>
+        <p class="callout-note">Los espacios de corte y los márgenes no se cuentan como sobrantes reutilizables. Los sobrantes son un cálculo geométrico teórico: no representan material recuperado tras un corte físico real.</p>
+      </section>
+
+      <section class="report-block" aria-labelledby="theoretical-remnants-title">
+        <div class="block-heading"><div><p class="eyebrow">CLASIFICACIÓN TEÓRICA</p><h2 id="theoretical-remnants-title">Sobrantes previstos</h2></div><span class="tag">Para cuatro organizadores</span></div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Código</th><th>Dimensiones</th><th>Área</th><th>Destino propuesto</th></tr></thead>
+            <tbody>
+              <tr><td>R-001</td><td>16,4 × 98 cm</td><td>1.607,20 cm²</td><td>Almacenamiento</td></tr>
+              <tr><td>R-002</td><td>9,7 × 5,1 cm</td><td>49,47 cm²</td><td>Evaluar reutilización</td></tr>
+              <tr><td>R-003</td><td>9,7 × 5,1 cm</td><td>49,47 cm²</td><td>Evaluar reutilización</td></tr>
+              <tr><td>R-004</td><td>12 × 1,4 cm</td><td>16,80 cm²</td><td>Evaluar reciclaje</td></tr>
+              <tr><td>R-005</td><td>9,7 × 1,4 cm</td><td>13,58 cm²</td><td>Evaluar reciclaje</td></tr>
+              <tr><td>R-006</td><td>9,7 × 1,4 cm</td><td>13,58 cm²</td><td>Evaluar reciclaje</td></tr>
+              <tr class="table-total"><td>Total</td><td></td><td>1.750,10 cm²</td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">Esta tabla describe áreas teóricas de la distribución; no es un registro de sobrantes reales.</p>
+      </section>
+    </section>
+
+    <section class="page-section content-section" id="costos" aria-labelledby="costs-title" hidden>
+      <div class="section-heading">
+        <p class="eyebrow">02 · ESTIMACIÓN ECONÓMICA</p>
+        <h1 id="costs-title">Costos de producción</h1>
+        <p>Consulta la estructura estimada de costos y simula cantidades de producción y presupuestos.</p>
+      </div>
+      <div class="academic-note"><strong>Estimaciones académicas:</strong> los valores son supuestos para el ejercicio y no cotizaciones comerciales verificadas.</div>
+
+      <section class="report-block" aria-labelledby="cost-structure-title">
+        <div class="block-heading"><div><p class="eyebrow">ESTRUCTURA DE COSTOS</p><h2 id="cost-structure-title">Costos fijos y variables</h2></div></div>
+        <div class="cost-tables-grid">
+          <div class="cost-table-card">
+            <div class="cost-card-heading"><span class="cost-icon variable-icon">↗</span><div><h3>Variable · por organizador</h3><p>Depende de cada unidad fabricada.</p></div></div>
+            <div class="table-wrap"><table><thead><tr><th>Concepto</th><th>Costo unitario</th></tr></thead><tbody>
+              <tr><td>Cartón</td><td>$2.500 COP</td></tr><tr><td>Pegante</td><td>$800 COP</td></tr><tr><td>Pintura acrílica</td><td>$1.000 COP</td></tr><tr><td>Sellador o barniz</td><td>$500 COP</td></tr><tr><td>Mano de obra directa</td><td>$4.000 COP</td></tr><tr class="table-total"><td>Total variable</td><td>$8.800 COP</td></tr>
+            </tbody></table></div>
+            <p class="table-note">La mano de obra incluye corte, ensamblaje y decoración del organizador pintado. No se contabiliza de nuevo en otro concepto.</p>
+          </div>
+          <div class="cost-table-card">
+            <div class="cost-card-heading"><span class="cost-icon fixed-icon">●</span><div><h3>Fijo · mensual</h3><p>Asignaciones mensuales del taller.</p></div></div>
+            <div class="table-wrap"><table><thead><tr><th>Concepto</th><th>Costo mensual</th></tr></thead><tbody>
+              <tr><td>Servicios públicos del taller</td><td>$60.000 COP</td></tr><tr><td>Depreciación de herramientas</td><td>$30.000 COP</td></tr><tr><td>Mantenimiento preventivo</td><td>$15.000 COP</td></tr><tr><td>Internet</td><td>$40.000 COP</td></tr><tr><td>Gastos administrativos</td><td>$40.000 COP</td></tr><tr class="table-total"><td>Total costos fijos</td><td>$185.000 COP</td></tr>
+            </tbody></table></div>
+            <p class="table-note">La depreciación refleja el desgaste contable de herramientas; los demás valores son asignaciones estimadas.</p>
+          </div>
+        </div>
+        <div class="cost-carton-note"><strong>Supuesto del cartón</strong><span>Una lámina de 70 × 100 cm cuesta $10.000 COP. Se asigna a cuatro unidades: $10.000 / 4 = $2.500 COP por organizador, suponiendo compras en cantidades compatibles con la producción.</span></div>
+      </section>
+
+      <section class="report-block" aria-labelledby="function-title">
+        <div class="block-heading"><div><p class="eyebrow">FUNCIÓN DE COSTOS</p><h2 id="function-title">Costo mensual según la producción</h2></div></div>
+        <div class="function-panel"><div class="function-equation"><span>C(n) =</span><strong>185.000 + 8.800n</strong></div><p><strong>C(n)</strong> es el costo total mensual en COP; <strong>n</strong> es la cantidad fabricada; $185.000 son los costos fijos mensuales y $8.800 el costo variable por unidad.</p>
+          <div class="worked-example"><span>EJEMPLO · 20 UNIDADES</span><code>C(20) = 185.000 + 8.800(20)<br>C(20) = 185.000 + 176.000</code><strong>C(20) = $361.000 COP</strong></div>
+        </div>
+        <div class="table-wrap cost-results-table"><table><thead><tr><th>Cantidad de organizadores</th><th>Costo total (COP)</th></tr></thead><tbody>
+          <tr><td>0</td><td>$185.000</td></tr><tr><td>5</td><td>$229.000</td></tr><tr><td>10</td><td>$273.000</td></tr><tr><td>15</td><td>$317.000</td></tr><tr><td>20</td><td>$361.000</td></tr><tr><td>25</td><td>$405.000</td></tr><tr><td>30</td><td>$449.000</td></tr>
+        </tbody></table></div>
+        <div class="chart-card"><h3>El costo aumenta con cada unidad producida</h3><svg id="cost-chart-svg" class="cost-chart-svg" role="img" aria-label="Gráfica de costo total en COP según la cantidad de organizadores"></svg></div>
+      </section>
+
+      <section class="report-block" aria-labelledby="production-simulator-title">
+        <div class="block-heading"><div><p class="eyebrow">SIMULADOR 01</p><h2 id="production-simulator-title">Simulador de producción</h2></div><span class="tag">Costos unitarios fijos</span></div>
+        <div class="simulator-card">
+          <div class="simulator-input">
+            <label for="production-quantity">Cantidad de organizadores</label>
+            <input id="production-quantity" type="number" min="0" step="1" value="20" inputmode="numeric" required aria-describedby="production-error production-help">
+            <small id="production-help">Ingresa un número entero igual o mayor que cero.</small>
+            <p class="form-error" id="production-error" role="alert" hidden></p>
+            <div class="fixed-cost-chip"><span>Costos fijos</span><strong>$185.000 COP</strong></div>
+            <div class="fixed-cost-chip"><span>Costo variable / unidad</span><strong>$8.800 COP</strong></div>
+          </div>
+          <div class="simulator-results" aria-live="polite">
+            <div class="sim-result"><span>Cantidad</span><strong id="production-result-qty">20</strong></div>
+            <div class="sim-result"><span>Costos fijos</span><strong id="production-result-fixed">$185.000 COP</strong></div>
+            <div class="sim-result"><span>Costos variables</span><strong id="production-result-variable">$176.000 COP</strong></div>
+            <div class="sim-result sim-result-total"><span>Costo total</span><strong id="production-result-total">$361.000 COP</strong></div>
+            <div class="sim-result"><span>Costo promedio / organizador</span><strong id="production-result-average">$18.050 COP</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="report-block" aria-labelledby="budget-simulator-title">
+        <div class="block-heading"><div><p class="eyebrow">SIMULADOR 02</p><h2 id="budget-simulator-title">Simulador de presupuesto</h2></div><span class="tag">Presupuesto inicial: $400.000 COP</span></div>
+        <div class="simulator-card budget-simulator">
+          <div class="simulator-input">
+            <label for="available-budget">Presupuesto disponible (COP)</label>
+            <input id="available-budget" type="number" min="0" step="any" value="400000" inputmode="decimal" required aria-describedby="budget-error budget-help">
+            <small id="budget-help">Ingresa un valor numérico igual o mayor que cero.</small>
+            <p class="form-error" id="budget-error" role="alert" hidden></p>
+            <div id="budget-warning" class="warning-box" role="status" hidden></div>
+            <p class="formula-hint">Cantidad máxima = ⌊(presupuesto − costos fijos) / costo variable unitario⌋</p>
+          </div>
+          <div class="simulator-results" aria-live="polite">
+            <div class="sim-result"><span>Presupuesto disponible</span><strong id="budget-result-available">$400.000 COP</strong></div>
+            <div class="sim-result"><span>Costos fijos</span><strong>$185.000 COP</strong></div>
+            <div class="sim-result"><span>Disponible para costos variables</span><strong id="budget-result-variable">$215.000 COP</strong></div>
+            <div class="sim-result sim-result-highlight"><span>Cantidad máxima</span><strong id="budget-result-qty">24 organizadores</strong></div>
+            <div class="sim-result"><span>Costo total recomendado</span><strong id="budget-result-total">$396.200 COP</strong></div>
+            <div class="sim-result"><span>Saldo restante</span><strong id="budget-result-balance">$3.800 COP</strong></div>
+          </div>
+          <div class="budget-check" id="budget-check" aria-live="polite"><span>Comprobación</span><strong id="budget-check-message">$396.200 + $3.800 = $400.000 COP. 25 unidades costarían $405.000 COP, $5.000 por encima del presupuesto.</strong></div>
+        </div>
+      </section>
+    </section>
+
+    <section class="page-section content-section" id="propuesta" aria-labelledby="proposal-title" hidden>
+      <div class="section-heading">
+        <p class="eyebrow">03 · APROVECHAMIENTO DE MATERIAL</p>
+        <h1 id="proposal-title">Propuesta de aprovechamiento</h1>
+        <p>Clasificar, almacenar y dar un destino útil a los sobrantes, registrando aparte las mediciones de futuras producciones.</p>
+      </div>
+
+      <section class="report-block" aria-labelledby="proposal-strategy-title">
+        <div class="block-heading"><div><p class="eyebrow">PROPUESTA</p><h2 id="proposal-strategy-title">Aprovechar antes de descartar</h2></div></div>
+        <div class="strategy-grid">
+          <article class="strategy-card"><span class="strategy-icon">↻</span><div><h3>Reutilizar</h3><p>Valorar los sobrantes para elaborar productos pequeños como separadores, soportes, accesorios, bandejas o cajas pequeñas.</p></div></article>
+          <article class="strategy-card"><span class="strategy-icon">▤</span><div><h3>Clasificar y almacenar</h3><p>Guardar las piezas que estén en buenas condiciones, organizadas por tamaño, forma y estado, para futuras producciones.</p></div></article>
+        </div>
+        <div class="process-card"><h3>Procedimiento de implementación</h3><ol class="process-list">
+          <li><span>01</span><p>Planificar la distribución de las piezas antes de realizar los cortes.</p></li>
+          <li><span>02</span><p>Separar los sobrantes después del proceso de corte.</p></li>
+          <li><span>03</span><p>Clasificarlos según su tamaño, forma y estado.</p></li>
+          <li><span>04</span><p>Almacenarlos en un lugar seco y debidamente identificado.</p></li>
+          <li><span>05</span><p>Reutilizarlos en otros productos o registrar su destino final.</p></li>
+        </ol></div>
+      </section>
+
+      <section class="report-block" aria-labelledby="indicators-title">
+        <div class="block-heading"><div><p class="eyebrow">MEDICIÓN FUTURA</p><h2 id="indicators-title">Indicadores de aprovechamiento</h2></div></div>
+        <div class="indicator-grid">
+          <article><h3>Material recuperado</h3><p>Área de los sobrantes útiles que se almacenan.</p></article>
+          <article><h3>Material reutilizado</h3><p>Área de los sobrantes incorporada a nuevos productos.</p></article>
+          <article><h3>Material descartado</h3><p>Área del material que no puede aprovecharse.</p></article>
+          <article><h3>Porcentaje de reutilización</h3><p>(Área reutilizada / área total recuperada) × 100.</p></article>
+          <article><h3>Ahorro en cartón</h3><p>Costo del material nuevo que se evita comprar mediante la reutilización.</p></article>
+        </div>
+        <p class="callout-note">No se asignan porcentajes ni ahorros alcanzados: aún no hay mediciones físicas reales. Estos indicadores podrán calcularse con la información que se registre en futuras actividades de producción.</p>
+      </section>
+
+      <section class="report-block theoretical-remnants" aria-labelledby="proposal-theoretical-title">
+        <div class="block-heading"><div><p class="eyebrow">REFERENCIA · NO ES REGISTRO REAL</p><h2 id="proposal-theoretical-title">Sobrantes teóricos de la lámina</h2></div><span class="tag">4 organizadores · 70 × 100 cm</span></div>
+        <div class="table-wrap"><table><thead><tr><th>Código</th><th>Dimensiones</th><th>Área</th><th>Destino propuesto</th></tr></thead><tbody>
+          <tr><td>R-001</td><td>16,4 × 98 cm</td><td>1.607,20 cm²</td><td>Almacenamiento</td></tr>
+          <tr><td>R-002</td><td>9,7 × 5,1 cm</td><td>49,47 cm²</td><td>Evaluar reutilización</td></tr>
+          <tr><td>R-003</td><td>9,7 × 5,1 cm</td><td>49,47 cm²</td><td>Evaluar reutilización</td></tr>
+          <tr><td>R-004</td><td>12 × 1,4 cm</td><td>16,80 cm²</td><td>Evaluar reciclaje</td></tr>
+          <tr><td>R-005</td><td>9,7 × 1,4 cm</td><td>13,58 cm²</td><td>Evaluar reciclaje</td></tr>
+          <tr><td>R-006</td><td>9,7 × 1,4 cm</td><td>13,58 cm²</td><td>Evaluar reciclaje</td></tr>
+          <tr class="table-total"><td>Total</td><td></td><td>1.750,10 cm²</td><td></td></tr>
+        </tbody></table></div>
+        <p class="table-note">Valores de distribución geométrica teórica; no corresponden a sobrantes obtenidos mediante corte físico ni se suman a los registros de usuario.</p>
+      </section>
+
+      <section class="report-block" aria-labelledby="benefits-title">
+        <div class="block-heading"><div><p class="eyebrow">IMPACTO ESPERADO</p><h2 id="benefits-title">Beneficios de la propuesta</h2></div></div>
+        <ul class="benefit-list">
+          <li>Disminución del desperdicio de cartón.</li><li>Mejor organización y almacenamiento del material.</li>
+          <li>Aprovechamiento de sobrantes en otros productos.</li><li>Posible reducción de futuras compras de materia prima.</li>
+          <li>Contribución al uso responsable de los recursos.</li>
+        </ul>
+      </section>
+
+      <section id="remnant-register-block" class="report-block" data-has-records="false" aria-labelledby="register-title">
+        <div class="block-heading"><div><p class="eyebrow">REGISTRO INTERACTIVO</p><h2 id="register-title">Sobrantes de futuras producciones</h2></div><span class="tag">Se guarda en este navegador</span></div>
+        <p class="section-intro">Registra sobrantes reales o identificados durante una futura producción. Estos datos se mantienen separados de la tabla teórica R-001 a R-006.</p>
+        <form id="remnant-form" class="remnant-form" novalidate>
+          <div class="form-field"><label for="remnant-code">Código</label><input id="remnant-code" name="code" type="text" maxlength="40" required placeholder="Ej. LOTE-001"></div>
+          <div class="form-field"><label for="remnant-length">Largo (cm)</label><input id="remnant-length" name="length" type="number" min="0" step="any" required inputmode="decimal" placeholder="Ej. 15"></div>
+          <div class="form-field"><label for="remnant-width">Ancho (cm)</label><input id="remnant-width" name="width" type="number" min="0" step="any" required inputmode="decimal" placeholder="Ej. 8"></div>
+          <div class="form-field"><label for="remnant-area">Área calculada (cm²)</label><output id="remnant-area" class="area-output">—</output></div>
+          <div class="form-field"><label for="remnant-condition">Estado</label><select id="remnant-condition" name="condition" required><option value="">Selecciona…</option><option value="Bueno">Bueno</option><option value="Regular">Regular</option><option value="Deteriorado">Deteriorado</option></select></div>
+          <div class="form-field"><label for="remnant-destination">Destino</label><select id="remnant-destination" name="destination" required><option value="">Selecciona…</option><option value="Almacenamiento">Almacenamiento</option><option value="Reutilización">Reutilización</option><option value="Reciclaje">Reciclaje</option><option value="Descarte">Descarte</option></select></div>
+          <div class="form-actions"><button class="button button-primary" type="submit">Agregar registro</button><p id="remnant-message" class="form-message" role="status" aria-live="polite"></p></div>
+        </form>
+
+        <div class="user-register">
+          <div class="register-heading"><div><h3>Registros ingresados</h3><p>Solo incluye mediciones introducidas por el usuario.</p></div><button id="export-csv" class="button button-secondary action-button" type="button">Exportar registros a CSV</button></div>
+          <div class="table-wrap">
+            <table id="remnant-table"><thead><tr><th>Código</th><th>Dimensiones</th><th>Área</th><th>Estado</th><th>Destino</th><th class="screen-only">Acción</th></tr></thead>
+              <tbody id="remnant-table-body"><tr class="empty-row"><td colspan="6">Todavía no hay sobrantes registrados.</td></tr></tbody>
+            </table>
+          </div>
+          <p id="register-load-message" class="form-message" role="status" hidden></p>
+          <div class="register-indicators" aria-live="polite">
+            <article><span>Área total registrada</span><strong id="registered-area">0 cm²</strong></article>
+            <article><span>Almacenamiento</span><strong id="destination-storage">0 registros · 0 cm²</strong></article>
+            <article><span>Reutilización</span><strong id="destination-reuse">0 registros · 0 cm²</strong></article>
+            <article><span>Reciclaje</span><strong id="destination-recycle">0 registros · 0 cm²</strong></article>
+            <article><span>Descarte</span><strong id="destination-discard">0 registros · 0 cm²</strong></article>
+          </div>
+          <p class="table-note">El registro se conserva mediante localStorage en este navegador y equipo. Los indicadores interactivos se calculan únicamente a partir de estos registros.</p>
+        </div>
+      </section>
+
+    </section>
+  </main>
+
+  <footer class="site-footer screen-only">
+    <a href="#inicio" class="footer-home">Organizador de Cartón <span>·</span> Volver al inicio</a>
+    <span>Proyecto académico · Las estimaciones económicas no son cotizaciones comerciales.</span>
+  </footer>
+</body>
+</html>
